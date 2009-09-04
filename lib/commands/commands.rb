@@ -1,3 +1,17 @@
+desc "Open this repo's issue tracker in a web browser."
+command :issues do |user|
+  if helper.project
+    helper.open helper.issuespage_for(user || helper.owner)
+  end
+end
+
+desc "Open this repo's wiki in a web browser."
+command :wiki do |user|
+  if helper.project
+    helper.open helper.wikipage_for(user || helper.owner)
+  end
+end
+
 desc "Open this repo's master branch in a web browser."
 command :home do |user|
   if helper.project

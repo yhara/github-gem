@@ -235,6 +235,14 @@ helper :private_url_for do |user|
   private_url_for_user_and_repo user, project
 end
 
+helper :issuespage_for do |user|
+  "https://github.com/#{user}/#{project}/issues"
+end
+
+helper :wikipage_for do |user|
+  "http://wiki.github.com/#{user}/#{project}"
+end
+
 helper :homepage_for do |user, branch|
   "https://github.com/#{user}/#{project}/tree/#{branch}"
 end
